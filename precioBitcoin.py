@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 import requests
 import schedule
 
-TOKEN = '2071545023:AAHdU-bdQ285L4YYU4HpZ6NvUJhZ3Q908gA'
+TOKEN #Agregamos el Token
 chatId = '1442996092'
 
 #<td class="wbreak_word align-middle coin_price">$60,832.60</td>
