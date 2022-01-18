@@ -2,8 +2,12 @@ from bs4 import BeautifulSoup
 import requests
 import schedule
 
+<<<<<<< HEAD
 from constantes import BTC
 #TOKEN 
+=======
+TOKEN #Agregamos el Token
+>>>>>>> 427f2ff62394bb19bbc5d0ec25bb03ff5cf3689e
 chatId = '1442996092'
 
 #<td class="wbreak_word align-middle coin_price">$60,832.60</td>
@@ -38,5 +42,10 @@ if __name__ == '__main__':
     schedule.every().day.at("18:22").do(report)
 
     while True:
+<<<<<<< HEAD
 
         schedule.run_pending()
+=======
+        
+        schedule.run_pending()
+>>>>>>> 427f2ff62394bb19bbc5d0ec25bb03ff5cf3689e
