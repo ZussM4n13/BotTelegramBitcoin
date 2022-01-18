@@ -1,16 +1,17 @@
 import logging
+from constantes import ZUSSM4NTOKEN
 #from telegram.constants import CHATACTION_UPLOAD_DOCUMENT
 from telegram.ext import Updater, CallbackContext, CommandHandler, MessageHandler, Filters
 from telegram import Update
 #from telegram.ext import CallbackContext
 
 
-TOKEN = '2130884556:AAGUm37sBSJhDeyGkpHn9ML-k3Q10WLqzJM'
+ZUSSM4NTOKEN = '2130884556:AAGUm37sBSJhDeyGkpHn9ML-k3Q10WLqzJM'
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s, level=loggin.INFO')
 
 
-updater = Updater(token=TOKEN, use_context=True)
+updater = Updater(token=ZUSSM4NTOKEN, use_context=True)
 dispatcher = updater.dispatcher
 
 def start(update: Update, context: CallbackContext):
@@ -40,9 +41,6 @@ dispatcher.add_handler(echo_handler)
 
 caps_handler = CommandHandler('caps', caps)
 dispatcher.add_handler(caps_handler)
-
-
-
 
 
 
