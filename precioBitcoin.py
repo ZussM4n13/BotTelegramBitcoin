@@ -2,7 +2,8 @@ from bs4 import BeautifulSoup
 import requests
 import schedule
 
-TOKEN = '2071545023:AAHdU-bdQ285L4YYU4HpZ6NvUJhZ3Q908gA'
+from constantes import BTC
+#TOKEN 
 chatId = '1442996092'
 
 #<td class="wbreak_word align-middle coin_price">$60,832.60</td>
@@ -20,7 +21,7 @@ def btc_scrapping():
 #https://api.telegram.org/bot2071545023:AAHdU-bdQ285L4YYU4HpZ6NvUJhZ3Q908gA/getUpdates
 
 def bot_send_text(bot_message):
-    send_text = 'https://api.telegram.org/bot' + TOKEN + '/sendMessage?chat_id=' + chatId + '&parse_mode=Markdown&text=' + bot_message
+    send_text = 'https://api.telegram.org/bot' + BTC + '/sendMessage?chat_id=' + chatId + '&parse_mode=Markdown&text=' + bot_message
 
     response = requests.get(send_text)
     return response
@@ -34,8 +35,8 @@ def report():
 
 if __name__ == '__main__':
 
-    schedule.every().day.at("18:24").do(report)
+    schedule.every().day.at("18:22").do(report)
 
     while True:
-        
+
         schedule.run_pending()
